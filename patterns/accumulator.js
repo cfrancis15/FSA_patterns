@@ -91,38 +91,38 @@ export function countPresent(attendance) {
   return presentStudents
 }
 
-/**
- * In DNA strings, the symbols `A` and `T` are complements of each other,
- * and the symbols `C` and `G` are complements of each other.
- * A complementary strand is a string formed by the complement
- * of each nucleobase in the original string.
- *
- * @param {string} dna - a string of the symbols `A`, `T`, `C`, or `G`
- * @returns {string} the complementary DNA strand
- * @returns `null` if `dna` is not a string
- */
-export function complementDNA(dna) {
+  /**
+   * In DNA strings, the symbols `A` and `T` are complements of each other,
+   * and the symbols `C` and `G` are complements of each other.
+   * A complementary strand is a string formed by the complement
+   * of each nucleobase in the original string.
+   *
+   * @param {string} dna - a string of the symbols `A`, `T`, `C`, or `G`
+   * @returns {string} the complementary DNA strand
+   * @returns `null` if `dna` is not a string
+   */
+  export function complementDNA(dna) {
 
-  if (typeof dna !== 'string') return null
-  
-  let lettersArray = dna.split('')
+    if (typeof dna !== 'string') return null
+    
+    let lettersArray = dna.split('')
 
-  
-  lettersArray = lettersArray.map(letter =>{
-    if(letter === 'A'){
-      letter = "T"
-    }else if(letter === 'T'){
-      letter = "A"
-    }else if(letter === 'C'){
-      letter = "G"
-    }else if(letter === "G"){
-      letter = 'C'
-    }
-  })
+    
+    lettersArray = lettersArray.map(letter =>{
+      if(letter === 'A'){
+        return 'T'
+      }else if(letter === 'T'){
+        return "A"
+      }else if(letter === 'C'){
+        return "G"
+      }else if(letter === "G"){
+        return 'C'
+      }
+    })
 
-  lettersArray = lettersArray.join('')
+    lettersArray = lettersArray.join('')
 
-  return lettersArray
+    return lettersArray
 
 
-}
+  }

@@ -6,7 +6,7 @@ import {
   getLongestString,
   countPresent,
   complementDNA,
-} from "../patterns/accumulator";
+} from "../patterns/accumulator.js";
 
 describe("sumToN", () => {
   it("returns NaN if argument is not a number", () => {
